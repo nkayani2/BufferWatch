@@ -18,6 +18,7 @@
 #pragma comment(lib, "gdi32.lib")
 #pragma comment(lib, "user32.lib")
 
+// Buffer size for recv and file transfers
 #define BUFFER_SIZE 4096
 #define RECONNECT_INTERVAL 5000
 
