@@ -1,4 +1,4 @@
-// imports
+// keylogger.h - Keylogging thread for backdoor3o 
 #ifndef KEYLOGGER_H
 #define KEYLOGGER_H
 
