@@ -1,3 +1,4 @@
+# Mock Victim for C2 Server Testing
 """
 Mock victim to test the C2 server without needing the compiled backdoor.
 Run this on the SAME Kali machine to verify the server is working.
