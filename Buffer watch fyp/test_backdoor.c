@@ -1,3 +1,4 @@
+// test_backdoor.c - Minimal backdoor for testing TCP connect + command execution
 // ===================================================================
 // BufferWatch - MINIMAL TEST BACKDOOR (no persistence, no junk, no obfuscation)
 // Purpose: Test if basic TCP connect + command execution works
