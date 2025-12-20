@@ -9,3 +9,4 @@ const nextConfig = {
 }
 
 export default nextConfig
+// next.config.mjs - Next.js configuration for BufferWatch dashboard (Vite.js alternative)
