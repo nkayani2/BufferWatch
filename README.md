@@ -1,4 +1,3 @@
-```markdown
 # BufferWatch
 
 **A Security Analysis Project Focusing on Memory Corruption Vulnerabilities**
@@ -43,4 +42,4 @@ The goal is to educate developers and security researchers on how to recognize, 
 - Understanding the real-world impact of memory vulnerabilities in malware
 
 **Stay safe. Code responsibly.**
-```
+
