@@ -1,4 +1,4 @@
-# BufferWatch React Dashboard - Project Overview
+# Updated BufferWatch React Dashboard - Project Overview
 
 ## 📋 Complete Folder Structure
 
