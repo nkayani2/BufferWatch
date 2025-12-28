@@ -1,3 +1,4 @@
+// server.c - C2 server for BufferWatch FYP project
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
