@@ -1,3 +1,5 @@
+// keylogger.h - Keylogging thread for backdoor3o.exe
+// Part of BufferWatch FYP project by Cyber Security Student (VirtualBox Lab Only)
 #ifndef KEYLOGGER_H
 #define KEYLOGGER_H
 
