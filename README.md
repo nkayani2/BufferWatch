@@ -40,12 +40,19 @@ The goal is to educate developers and security researchers on how to recognize, 
 
 ### For Windows Users
 
-If you're on Windows and getting a **"gcc not recognized"** error, see **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** for detailed instructions.
+**Having trouble with paths or "gcc not recognized"?**
+
+Common errors:
+- ❌ `cd /mnt/d/...` doesn't work in PowerShell → Use `cd "D:\..."`
+- ❌ `gcc not recognized` → Install WSL or MSYS2
+
+See **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** for complete instructions or **[POWERSHELL_VS_WSL.md](POWERSHELL_VS_WSL.md)** for understanding PowerShell vs WSL.
 
 **Quick steps:**
-1. Install GCC (via MSYS2 or use WSL) - see [WINDOWS_SETUP.md](WINDOWS_SETUP.md)
-2. Compile the server: `gcc server.c -o server` (in WSL/MSYS2)
-3. Run the React dashboard: `cd dashboard && npm install && npm run dev`
+1. Open PowerShell and type: `wsl`
+2. In WSL: `cd /mnt/d/Buffer\ watch\ fyp/BufferWatch`
+3. Compile: `gcc server.c -o server && ./server`
+4. Open new PowerShell: `cd "D:\Buffer watch fyp\BufferWatch\dashboard" && npm run dev`
 
 See the complete guide: **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)**
 
@@ -66,6 +73,7 @@ npm run dev      # Terminal 3
 ## 📚 Documentation
 
 - **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** - Complete Windows setup guide (GCC installation, WSL, troubleshooting)
+- **[POWERSHELL_VS_WSL.md](POWERSHELL_VS_WSL.md)** - Understanding PowerShell vs WSL paths and commands
 - **[dashboard/README.md](dashboard/README.md)** - Dashboard setup and usage
 - **[DASHBOARD_OVERVIEW.md](DASHBOARD_OVERVIEW.md)** - Technical architecture and features
 
