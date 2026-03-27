@@ -71,18 +71,41 @@ You need to run **three** components in separate terminals:
 
 #### 1. Start the C2 Server (Terminal 1)
 
-First, compile and run the C server:
+**⚠️ WINDOWS USERS:** If you get `gcc: command not found` or `gcc not recognized`, see **[../WINDOWS_SETUP.md](../WINDOWS_SETUP.md)** for detailed instructions.
+
+**For Linux/Mac/WSL:**
 ```bash
 # In the project root directory
 gcc server.c -o server
 ./server
 ```
 
+**For Windows (PowerShell):**
+```powershell
+# Option A: Use WSL (Recommended)
+wsl
+cd /mnt/d/your/path/to/BufferWatch
+gcc server.c -o server
+./server
+
+# Option B: Use MSYS2 MinGW Terminal
+cd /d/your/path/to/BufferWatch
+gcc server.c -o server
+./server
+
+# Option C: Use the build script
+.\build_server.bat
+```
+
 The server will listen on `192.168.23.130:50005` (or configure as needed).
+
+> **Note**: The server uses POSIX sockets (Linux-style), so on Windows you **must** use WSL or MSYS2. See [../WINDOWS_SETUP.md](../WINDOWS_SETUP.md) for details.
 
 #### 2. Start the WebSocket Proxy (Terminal 2)
 
 The proxy bridges WebSocket (frontend) to TCP (C server):
+
+**All platforms:**
 ```bash
 cd dashboard
 npm run proxy
@@ -92,12 +115,24 @@ This starts the proxy on `ws://localhost:8080`.
 
 #### 3. Start the React Dashboard (Terminal 3)
 
+**All platforms:**
 ```bash
 cd dashboard
 npm run dev
 ```
 
 The dashboard will open at `http://localhost:3000`.
+
+### Quick Start for Windows
+
+Use the provided Windows batch script to start the dashboard and proxy:
+
+```powershell
+# From the project root
+.\start_dashboard.bat
+```
+
+This will open two windows for the proxy and dashboard. You still need to start the C2 server in WSL/MSYS2 separately.
 
 ## 🔧 Configuration
 
