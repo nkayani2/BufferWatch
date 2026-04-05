@@ -30,9 +30,63 @@ The goal is to educate developers and security researchers on how to recognize, 
 - `Win11bypass.c` — Backdoor client with persistence, remote shell, keylogging, and file download capabilities (contains analyzed vulnerabilities)
 - `keylogger.h` — Header file for keylogging functionality
 - `server.c` — Companion remote control server (for demonstration purposes)
+- `dashboard/` — Modern React + TypeScript dashboard for C2 control (NEW!)
+- `WINDOWS_SETUP.md` — Complete setup guide for Windows users (NEW!)
 - Other files include related experiments and variant implementations
 
 > **Note:** This code is provided strictly for educational and research purposes in a controlled environment. It must not be used for malicious or unauthorized activities.
+
+## 🚀 Quick Start
+
+### For Windows Users
+
+**Having trouble with paths or "gcc not recognized"?**
+
+Common errors:
+- ❌ `cd /mnt/d/...` doesn't work in PowerShell → Use `cd "D:\..."`
+- ❌ `gcc not recognized` → Install WSL or MSYS2
+
+See **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** for complete instructions or **[POWERSHELL_VS_WSL.md](POWERSHELL_VS_WSL.md)** for understanding PowerShell vs WSL.
+
+**Quick steps:**
+1. Open PowerShell and type: `wsl`
+2. In WSL: `cd /mnt/d/Buffer\ watch\ fyp/BufferWatch`
+3. Compile: `gcc server.c -o server && ./server`
+4. Open new PowerShell: `cd "D:\Buffer watch fyp\BufferWatch\dashboard" && npm run dev`
+
+See the complete guide: **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)**
+
+### For Linux/Mac Users
+
+```bash
+# Compile the server
+gcc server.c -o server
+./server
+
+# In another terminal, start the dashboard
+cd dashboard
+npm install
+npm run proxy    # Terminal 2
+npm run dev      # Terminal 3
+```
+
+## 📚 Documentation
+
+- **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** - Complete Windows setup guide (GCC installation, WSL, troubleshooting)
+- **[POWERSHELL_VS_WSL.md](POWERSHELL_VS_WSL.md)** - Understanding PowerShell vs WSL paths and commands
+- **[dashboard/README.md](dashboard/README.md)** - Dashboard setup and usage
+- **[DASHBOARD_OVERVIEW.md](DASHBOARD_OVERVIEW.md)** - Technical architecture and features
+
+## 🛠️ Build Scripts
+
+We've provided convenient build scripts:
+
+**Windows:**
+- `build_server.bat` - Compile the C2 server
+- `start_dashboard.bat` - Launch dashboard and proxy in separate windows
+
+**Linux/Mac/WSL:**
+- `build_server.sh` - Compile the C2 server
 
 ## Learning Outcomes
 
@@ -40,6 +94,8 @@ The goal is to educate developers and security researchers on how to recognize, 
 - Identifying unsafe string handling in legacy Windows applications
 - Recognizing the importance of bounds checking and safe APIs
 - Understanding the real-world impact of memory vulnerabilities in malware
+- Learning C2 (Command & Control) communication patterns
+- Building modern web interfaces for security tools
 
 **Stay safe. Code responsibly.**
 
